@@ -29,19 +29,19 @@ export default function ContactPage() {
     {
       icon: Phone,
       title: 'Call Us',
-      content: '+1 (555) 123-4567',
-      link: 'tel:+15551234567',
+      content: '+91 1234567890',
+      link: 'tel:+911234567890',
     },
     {
       icon: MapPin,
       title: 'Visit Us',
-      content: '123 Premium Avenue, New York, NY 10001',
+      content: '123 Premium Avenue, Delhi, New Delhi, 400001',
       link: 'https://maps.google.com',
     },
     {
       icon: Clock,
       title: 'Working Hours',
-      content: 'Mon - Fri: 9AM - 6PM EST',
+      content: 'Mon - Fri: 9AM - 6PM IST',
       link: null,
     },
   ];
