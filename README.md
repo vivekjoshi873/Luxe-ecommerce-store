@@ -2,7 +2,22 @@
 
 A stunning, high-performance eCommerce website built with Next.js 15, React, Tailwind CSS, Framer Motion, and Three.js.
 
+[![Live Demo](https://img.shields.io/badge/🚀_Live_Demo-Visit_Site-blue?style=for-the-badge&logo=vercel)](https://luxe-ecommerce-store.vercel.app/)
+
 ![Luxe Store](https://images.unsplash.com/photo-1472851294608-062f824d29cc?w=1200&h=400&fit=crop)
+
+---
+
+## 🌐 Live Demo
+
+**🚀 [Visit Live Site](https://luxe-ecommerce-store.vercel.app/)**
+
+Experience the full eCommerce functionality:
+- Browse products with 3D visuals
+- Add items to cart and favorites
+- Test the search and filtering
+- Explore the responsive design
+- Try the dark/light mode toggle
 
 ---
 
