@@ -3,17 +3,11 @@ import { getProduct, getProducts } from '@/lib/api';
 import { ProductDetailClient } from '@/components/ProductDetailClient';
 import { notFound } from 'next/navigation';
 
-/**
- * Product detail page with dynamic routing
- * SEO Optimized: Dynamic metadata, JSON-LD schema
- * Performance: Static generation with revalidation
- */
 
 interface ProductPageProps {
   params: { id: string };
 }
 
-// Generate metadata for SEO
 export async function generateMetadata({ params }: ProductPageProps): Promise<Metadata> {
   const product = await getProduct(params.id);
 
@@ -35,7 +29,6 @@ export async function generateMetadata({ params }: ProductPageProps): Promise<Me
   };
 }
 
-// Generate static paths for better performance
 export async function generateStaticParams() {
   const products = await getProducts();
   
@@ -51,7 +44,6 @@ export default async function ProductPage({ params }: ProductPageProps) {
     notFound();
   }
 
-  // JSON-LD Schema for SEO
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Product',

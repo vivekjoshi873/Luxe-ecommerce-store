@@ -19,23 +19,19 @@ export interface CartItem extends Product {
 }
 
 interface StoreState {
-  // Cart
   cart: CartItem[];
   addToCart: (product: Product) => void;
   removeFromCart: (productId: number) => void;
   updateQuantity: (productId: number, quantity: number) => void;
   clearCart: () => void;
   
-  // Favorites
   favorites: number[];
   toggleFavorite: (productId: number) => void;
   
-  // Cart sidebar
   isCartOpen: boolean;
   openCart: () => void;
   closeCart: () => void;
   
-  // Computed
   cartTotal: () => number;
   cartItemsCount: () => number;
 }
@@ -43,7 +39,6 @@ interface StoreState {
 export const useStore = create<StoreState>()(
   persist(
     (set, get) => ({
-      // Cart state
       cart: [],
       addToCart: (product) =>
         set((state) => {
@@ -74,7 +69,6 @@ export const useStore = create<StoreState>()(
         })),
       clearCart: () => set({ cart: [] }),
       
-      // Favorites state
       favorites: [],
       toggleFavorite: (productId) =>
         set((state) => ({
@@ -83,12 +77,10 @@ export const useStore = create<StoreState>()(
             : [...state.favorites, productId],
         })),
       
-      // Cart sidebar state
       isCartOpen: false,
       openCart: () => set({ isCartOpen: true }),
       closeCart: () => set({ isCartOpen: false }),
       
-      // Computed values
       cartTotal: () => {
         const state = get();
         return state.cart.reduce(
